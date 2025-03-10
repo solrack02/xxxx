@@ -204,6 +204,7 @@
               ],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -224,6 +225,32 @@
   arrRefStrings: [`tests`],
             arrPathData: [`all.dataToSet`],
             arrFuncs: [argDoc => console.log({argDoc})],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.colors.primary`],
+          value: `blue`
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[() =><></>],
