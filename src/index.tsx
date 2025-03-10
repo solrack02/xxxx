@@ -240,11 +240,17 @@
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.colors.primary`],
           value: `blue`
-        }})]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("sc1");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[() =><></>],
 
